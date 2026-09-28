@@ -3,7 +3,8 @@
 > **Technical Assignment - Full Stack Development Intern**  
 > Company: **Feedants**  
 > Feature: **Competition Details Screen - Dynamic, Concurrency-Safe Full-Stack Implementation**  
-> Tech Stack: **Node.js, Express.js, MongoDB (Mongoose), React 19, Tailwind CSS, Vite**
+> Tech Stack: **Node.js, Express.js, MongoDB (Mongoose), React 19, Tailwind CSS, Vite**  
+> 🎥 **Screen Recording Demo:** [Watch Loom Walkthrough (1m 23s)](https://www.loom.com/share/83eeba513a8c482bbe1c0fcc073e203c)
 
 ---
 
