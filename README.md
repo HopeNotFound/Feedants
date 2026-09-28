@@ -85,48 +85,52 @@ This repository contains a full-stack implementation of the **Feedants Classical
 ### Prerequisites
 - Node.js (v18 or higher)
 - npm
+- Git
 
-### 1. Install Dependencies
-In the root directory:
+### 1. Clone the Repository
+```bash
+git clone https://github.com/HopeNotFound/Feedants.git
+cd Feedants
+```
+
+### 2. Install Dependencies
 ```bash
 # Install backend dependencies
 npm install
 
-# Install client dependencies
+# Install frontend dependencies
 npm --prefix client install
 ```
 
-### 2. Configure Environment Variables
-A `.env` file is located in the root folder with:
+### 3. Configure Environment Variables
+Create a `.env` file in the root folder (you can copy the provided `.env.example`):
+```bash
+cp .env.example .env
+```
+Contents of `.env`:
 ```env
 PORT=3000
-MONGO_URI=mongodb+srv://yt:ronit03052004@backend.uugv4el.mongodb.net/pluto
-JWT_SECRET=e7978cc16f33971297d39edd663c3f90ca38bd3d5b71c56bd32cfbaa4fd2f96d
+MONGO_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_jwt_secret_key_here
 ```
-*(If your local network restricts remote Atlas SRV DNS queries, the server automatically switches to the built-in in-memory fallback store so all APIs and features continue functioning flawlessly without crashing!)*
+*(Note: If no MongoDB connection is provided or if network DNS restrictions occur, the server automatically switches to the built-in in-memory fallback store so all APIs, registration flows, and features continue functioning flawlessly without crashing!)*
 
-### 3. Build & Run the Application
+### 4. Run the Application
 
-#### Option A: Single Command (Production Mode - Recommended)
-Build the frontend and run the Express server on port 3000:
+#### Development Mode (Recommended - Both Backend & Frontend in 1 Command)
+Run both the Express backend (`http://localhost:3000`) and the Vite React frontend (`http://localhost:5173`) with live hot-reloading:
 ```bash
-# Build frontend
-npm run build
+npm run dev
+```
+Open **[http://localhost:5173](http://localhost:5173)** in your browser!
 
-# Start backend server (serves both API and React frontend on port 3000)
+#### Production Mode
+Build the client and start the Express production server (serves both API & Frontend on port 3000):
+```bash
+npm run build
 npm start
 ```
-Now open **[http://localhost:3000](http://localhost:3000)** in your browser!
-
-#### Option B: Development Mode (with Hot Reloading)
-```bash
-# Terminal 1: Run Backend API
-npm run dev
-
-# Terminal 2: Run Vite Frontend Dev Server
-npm run client
-```
-Open **[http://localhost:5173](http://localhost:5173)** in your browser.
+Open **[http://localhost:3000](http://localhost:3000)** in your browser!
 
 ---
 
